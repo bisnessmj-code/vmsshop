@@ -1,0 +1,500 @@
+*, :focus, :hover {
+	outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+                    
+::-webkit-scrollbar-track {
+    background-color: rgb(42, 42, 42);
+    border-radius: 2px;
+}
+                    
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #e6e6e6d7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+	user-select: none;
+	background: transparent;
+	overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    background: linear-gradient(90deg, #28282e, transparent 38%, transparent 68%, #28282e);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.categories {
+    display: flex;
+    position: absolute;
+    left: 0.5vw;
+    top: 5vh;
+}
+
+.categoryBtn {
+    background: #242424;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-inline: 10px;
+    cursor: pointer;
+}
+
+.categoryBtn:hover > .itemIcon {
+    filter: invert(100%);
+}
+
+.itemIcon {
+    display: block;
+    filter: invert(55%);
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    transition: 0.45s;
+    margin-top: -3px;
+}
+
+.panel {
+    position: absolute;
+    width: 26vw;
+    height: 95%;
+    right: 10px;
+    margin-top: 2%;
+    overflow: auto;
+    transition: opacity 0.2s;
+}
+
+.header {
+    position: absolute;
+    z-index: 100;
+    margin-left: 20px;
+    height: 30px;
+    color: white;
+    top: 13vh;
+    width: max-content;
+}
+
+#headerName {
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 0rem;
+    font-weight: 100;
+    font-size: 1.0vw;
+}
+
+#headerCategory {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    margin-top: -1rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 2.3vw;
+}
+
+.item-block {
+    border-bottom: 2px solid #bfbfbf1c;
+    padding-block: 40px
+}
+
+.item-title {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: white;
+}
+
+.item-subname {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-size: 0.85vw;
+    color: rgba(169, 169, 169, 0.98);
+    text-shadow: 1px 1px 3px #00000094, -1px -1px 5px #00000061;
+    margin-bottom: 0rem;
+    width: -webkit-fill-available;
+    margin-block-end: 0.3em;
+}
+
+.item-suboptions {
+    display: inline-flex;
+    width: 100%;
+    background: #242424;
+    border-radius: 45px;
+    margin-bottom: 2vh;
+    height: 2vw;
+}
+
+.item-suboptions-values {
+    width: -webkit-fill-available;
+    text-align: center;
+}
+
+.item-arrow-left, .item-arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    border-radius: 38px;
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    color: white;
+}
+
+.item-arrow-left > i, .item-arrow-right > i {
+    display: contents;
+    font-size: 0.95vw;
+}
+.item-arrow-left > i {
+    margin-left: 0.2em;
+}
+
+.item-arrow-right > i {
+    margin-right: 0.2em;
+}
+
+
+.item-value {
+    position: inherit;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 0.85vw;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    margin-block-end: 0.3em;
+}
+
+.item-value > input {
+    position: inherit;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 0.85vw;
+    color: white;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    margin-block-end: 0.3em;
+    text-align: right;
+    width: 3em;
+    margin: 0;
+}
+
+.settings {
+    position: absolute;
+    bottom: 1vw;
+    left: 1vw;
+}
+
+.accept-skin {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 2.25vw;
+    background: #0cca55;
+    border-radius: 0.8em;
+    color: white;
+    margin-right: 8px;
+    transition: 0.25s;
+}
+
+.accept-skin > p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2vh;
+    margin-block: 0vh;
+}
+
+.accept-skin:hover {
+    box-shadow: 0px 0px 25px #0b8f3da2;
+}
+
+.cancel-skin {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 2.25vw;
+    background: #ff0039;
+    color: white;
+    border-radius: 0.8em;
+    margin-right: 8px;
+    transition: 0.25s;
+}
+
+.cancel-skin > p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2vh;
+    margin-block: 0vh;
+}
+
+.cancel-skin:hover {
+    box-shadow: 0px 0px 25px #ff0037a2;
+}
+
+
+.hands-up {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.25vw;
+    width: 3.56vw;
+    background: #b1b1b1;
+    color: white;
+    border-radius: 0.8em;
+    transition: 0.25s;
+}
+
+.hands-up:hover {
+    box-shadow: 0px 0px 25px #b1b1b15c;
+}
+
+.hands-up > i {
+    font-size: 2vh;
+}
+
+
+.accept-icon {
+    font-size: 2vh;
+    margin-right: 1vh;
+    line-height: 0 !important;
+}
+
+.keys-help > div {
+    display: flex;
+    align-items: baseline;
+}
+
+.keys-help img {
+    width: 40px;
+    height: 40px;
+}
+
+.keys-help p:nth-of-type(1) {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.keys-help p:nth-of-type(2) {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.keys-help p:nth-of-type(3) {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.distance-title, .rotate-title, .height-title {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    margin-top: -1rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 18px;
+    margin-bottom: 1px;
+    color: white;
+}
+
+.distance-radius {
+    width: 10vw;
+    padding-block: 8px;
+    line-height: 0px;
+    padding-inline: 18px;
+    background: rgb(36, 36, 36);
+    border-radius: 45px;
+}
+
+.input-value-radius {
+    -webkit-appearance: none;
+    margin: auto;
+    width: 90%;
+    height: 20%;
+    border-radius: 20em;
+    background: #d3d3d3be;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.input-value-radius::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    rotate: 45deg;
+    background: #ffffff;
+    cursor: pointer;
+}
+  
+.input-value-radius::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    rotate: 45deg;
+    background: #ffffff;
+    cursor: pointer;
+}  
+
+.item-bar {
+    margin-inline: 15px
+}
+
+.second-item-bar {
+    display: inline-flex;
+    width: 100%;
+}
+
+.item-option {
+    width: -webkit-fill-available;
+    margin-inline-end: 15px;
+}
+
+.item-values {
+    display:flex;
+    align-items: center;
+    margin-inline:5px;
+}
+
+
+
+/* Receipt */
+
+.receipt {
+    display: none;
+    font-family: 'Fake Receipt', sans-serif !important;
+    position: absolute;
+    right: 5em;
+    bottom: -1em;
+    z-index: 5000;
+    animation: print-receipt 1.5s ease-in-out;
+}
+
+.receipt-texts {
+    position: absolute;
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.receipt-texts > .header-label {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.receipt-texts > .header-tuning {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.receipt-texts > .legend {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-texts > .list {
+    max-height: 25em;
+    overflow: auto;
+}
+
+.receipt-texts > .list .product {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7em;
+}
+
+.receipt-texts .receipt-discounted {
+    text-decoration: line-through;
+    color:rgba(0, 0, 0, 0.65) !important;
+    margin-left: 0.25em;
+}
+
+.receipt-texts > .total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-texts > .total .total-discounted {
+    text-decoration: line-through;
+    color:rgba(0, 0, 0, 0.65) !important;
+}
+
+.receipt-texts > .buttons {
+    display: flex;
+    margin-inline: auto;
+}
+
+.receipt-texts > .buttons > .pay_cash,
+.receipt-texts > .buttons > .pay_bank {
+    padding-block: 0.5em;
+    padding-inline: 1.5em;
+    margin-left: auto;
+    margin-right: 1em;
+    color: white;
+    border: 2px solid transparent;
+    background: rgb(82 112 255 / 77%);
+    border-radius: 0.5em;
+    transition: 0.2s;
+}
+
+.receipt-texts > .buttons > .pay_cash:hover,
+.receipt-texts > .buttons > .pay_bank:hover {
+    scale: 1.05;
+    background: rgb(82 112 255 / 100%);
+}
+
+.receipt-texts > .buttons > .cancel {
+    padding-block: 0.5em;
+    padding-inline: 1.5em;
+    margin-right: auto;
+    margin-left: 1em;
+    color: rgb(82 112 255 / 77%);
+    border: 2px solid rgb(82 112 255 / 77%);
+    background: transparent;
+    border-radius: 0.5em;
+    transition: 0.2s;
+}
+
+.receipt-texts > .buttons > .cancel:hover {
+    scale: 1.05;
+    color: rgb(82 112 255 / 100%);
+    border: 2px solid rgb(82 112 255 / 100%);
+}
+
+
+.receipt .receipt-img {
+    width: 25em;
+}
+
+@keyframes print-receipt {
+    0% {
+        bottom: -45em;
+    }
+    100% {
+        bottom: -1em;
+    }
+}
